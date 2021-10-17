@@ -19,10 +19,10 @@ const Countries = ({list,eventSearch}) => {
   
       </Container> :
         list.map((x,i) => 
-          <Row key={x.numericCode}>
+          <Row key={i}>
             <Col className="mx-auto border bg-light rounded m-5 p-2 w-25" xs={8} sm={7} md={4} lg={3}>
-              <p className="font-weight-bold"> {x.name}</p>
-              <Button value={x.name} onClick={eventSearch} variant="secondary" className="alternate-font-button">
+              <p className="font-weight-bold"> {x.name.common}</p>
+              <Button value={x.name.common} onClick={eventSearch} variant="secondary" className="alternate-font-button">
                 Mostrar
               </Button>
             </Col>

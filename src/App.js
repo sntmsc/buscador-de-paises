@@ -18,13 +18,13 @@ const eventSearch = (event) =>{
 
 const filtering= (event) => {
   const text= event.toLowerCase();
-  const f= countries.filter(x => x.name.toLowerCase().indexOf(text)!==-1)
+  const f= countries.filter(x => x.name.common.toLowerCase().indexOf(text)!==-1)
   return f
 }
 
   useEffect(() => {
     axios
-      .get('https://restcountries.eu/rest/v2/all')
+      .get('https://restcountries.com/v3.1/all')
       .then(response => {
         setCountries(response.data)
       })
